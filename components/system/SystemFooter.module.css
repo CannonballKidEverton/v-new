@@ -1,0 +1,25 @@
+.footer {
+  border-top: 1px solid var(--hairline);
+  padding: 24px var(--margin) 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-4);
+}
+
+.footer span {
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .footer {
+    font-size: 8px;
+    gap: 10px;
+  }
+}

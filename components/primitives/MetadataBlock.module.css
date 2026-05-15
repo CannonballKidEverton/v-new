@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-family: var(--font-mono), monospace;
+}
+
+.label {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 8px;
+}
+
+.value {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-2);
+  line-height: 1.55;
+}

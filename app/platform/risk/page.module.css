@@ -1,0 +1,192 @@
+/* PHILOSOPHY */
+.philosophy {
+  padding: 6vh var(--margin) 14vh;
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  column-gap: clamp(48px, 8vw, 120px);
+  align-items: start;
+}
+
+.prose {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+  line-height: 1.65;
+  color: var(--text);
+  max-width: 62ch;
+}
+
+.prose p {
+  margin-bottom: 1.55em;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.lead {
+  font-family: var(--font-sans), sans-serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(1.4rem, 2vw, 1.9rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.018em !important;
+  color: var(--text) !important;
+  margin-bottom: 1.5em !important;
+}
+
+.aside {
+  align-self: start;
+  padding-top: 6px;
+}
+
+/* METHODOLOGY */
+.method {
+  padding: 8vh var(--margin) 12vh;
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--hairline);
+}
+
+.methodStep {
+  padding: 40px 32px 36px;
+  border-right: 1px solid var(--hairline);
+}
+
+.methodStep:first-child {
+  padding-left: 0;
+}
+
+.methodStep:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.methodNum {
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.methodTitle {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  letter-spacing: -0.015em;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.methodDesc {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--text-2);
+  max-width: 38ch;
+}
+
+/* DOMAINS TABLE */
+.domains {
+  padding: 10vh 0 12vh;
+}
+
+.domainsOffset {
+  margin-left: var(--col-3);
+  margin-right: var(--margin);
+}
+
+.domainsTable {
+  margin-left: var(--col-3);
+  margin-right: var(--margin);
+  width: calc(100% - var(--col-3) - var(--margin));
+  border-collapse: collapse;
+  font-family: var(--font-mono), monospace;
+  table-layout: fixed;
+}
+
+.domainsTable thead th {
+  font-weight: 400;
+  text-align: left;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  padding: 0 24px 18px 0;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: bottom;
+}
+
+.domainsTable tbody td {
+  font-size: 13px;
+  letter-spacing: 0.015em;
+  color: var(--text);
+  padding: 22px 24px 22px 0;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: baseline;
+}
+
+.domainsTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.colRef { color: var(--text-3); width: 8%; }
+.colName { color: var(--text); width: 26%; }
+.colDesc {
+  color: var(--text-2);
+  width: 66%;
+  font-family: var(--font-serif), serif;
+  font-size: 14px;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
+.domainsFoot {
+  padding-top: 22px;
+  border-top: 1px solid var(--hairline);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-4);
+}
+
+.sep {
+  opacity: 0.5;
+}
+
+@media (max-width: 960px) {
+  .philosophy {
+    grid-template-columns: 1fr;
+    gap: 48px 0;
+  }
+  .methodGrid {
+    grid-template-columns: 1fr;
+  }
+  .methodStep {
+    border-right: none;
+    border-top: 1px solid var(--hairline);
+    padding: 32px 0;
+  }
+  .methodStep:first-child {
+    border-top: none;
+    padding-top: 32px;
+  }
+  .domainsOffset,
+  .domainsTable {
+    margin-left: var(--margin);
+    width: calc(100% - 2 * var(--margin));
+  }
+  .colRef { width: 16%; }
+  .colName { width: 84%; }
+  .colDesc { display: none; }
+}

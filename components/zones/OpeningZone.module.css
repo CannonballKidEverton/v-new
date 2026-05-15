@@ -1,0 +1,97 @@
+.opening {
+  min-height: 100vh;
+  padding: calc(var(--header) + 13vh) var(--margin) 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.manifesto {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 10vw, 10.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-top: 2vh;
+  margin-right: calc(-1 * var(--margin));
+  padding-right: 8px;
+}
+
+.lineClip {
+  display: block;
+  overflow: hidden;
+}
+
+.line {
+  display: block;
+  transform: translateY(112%);
+  transition: transform var(--motion-arrival) var(--motion-arrival-easing);
+  will-change: transform;
+}
+
+.statement2 {
+  margin-top: 0.45em;
+}
+
+/* Staggered arrival — applied when the parent zone gets .in-view */
+.opening:global(.in-view) .lineClip:nth-child(1) .line { transition-delay: 60ms; transform: translateY(0); }
+.opening:global(.in-view) .lineClip:nth-child(2) .line { transition-delay: 170ms; transform: translateY(0); }
+.opening:global(.in-view) .lineClip:nth-child(3) .line { transition-delay: 280ms; transform: translateY(0); }
+.opening:global(.in-view) .lineClip:nth-child(4) .line { transition-delay: 540ms; transform: translateY(0); }
+
+.foot {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  opacity: 0;
+  transition: opacity 600ms ease 900ms;
+}
+
+.opening:global(.in-view) .foot {
+  opacity: 1;
+}
+
+.sep {
+  color: var(--text-4);
+  opacity: 0.6;
+}
+
+.radar {
+  position: absolute;
+  right: var(--margin);
+  bottom: 4.5vh;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.35;
+  animation: radar-pulse 8s infinite ease-in-out;
+}
+
+@keyframes radar-pulse {
+  0%, 100% { opacity: 0.3; }
+  18%      { opacity: 1; }
+  36%      { opacity: 0.3; }
+}
+
+@media (max-width: 960px) {
+  .manifesto {
+    font-size: clamp(2.2rem, 12vw, 6rem);
+    margin-right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line { transform: none; transition: none; }
+  .radar { animation: none; opacity: 0.6; }
+  .foot { opacity: 1; transition: none; }
+}

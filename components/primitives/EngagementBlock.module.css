@@ -1,0 +1,38 @@
+.engage {
+  min-height: 50vh;
+  padding: 14vh var(--margin) 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lead {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--text);
+  margin-bottom: 44px;
+  max-width: 14ch;
+}
+
+.email {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.email a {
+  color: var(--text-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline-2);
+  padding-bottom: 4px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.email a:hover {
+  color: var(--text);
+  border-color: var(--text);
+}

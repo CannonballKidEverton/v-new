@@ -1,0 +1,49 @@
+.body {
+  padding: 8vh var(--margin) 14vh;
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  column-gap: clamp(48px, 8vw, 120px);
+  align-items: start;
+}
+
+.bio {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+  line-height: 1.65;
+  color: var(--text);
+  max-width: 62ch;
+}
+
+.bio p {
+  margin-bottom: 1.55em;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+.aside {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+  background: var(--bg-2);
+  border: 1px solid var(--hairline-2);
+  /* Placeholder slot. Replace with commissioned monochrome portrait. */
+}
+
+@media (max-width: 960px) {
+  .body {
+    grid-template-columns: 1fr;
+    gap: 56px 0;
+  }
+  .portrait {
+    max-width: 280px;
+  }
+}

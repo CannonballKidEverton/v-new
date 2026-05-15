@@ -1,0 +1,317 @@
+/* Google Fonts are loaded via <link> in app/layout.tsx to avoid render-blocking.
+   CSS variable declarations below serve as system-font fallbacks during load. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   BASE — minimal overrides on top of Tailwind's preflight
+   ============================================================ */
+@layer base {
+  :root {
+    /* Font family CSS variables — referenced throughout the design system.
+       Values here are fallbacks; Google Fonts (imported above) loads the named faces. */
+    --font-sans:  'Inter Tight', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+    --font-mono:  'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    --margin: clamp(28px, 4vw, 64px);
+    --header: 60px;
+    --col-step: calc((100vw - 2 * var(--margin)) / 12);
+    --col-3: calc(var(--margin) + 2 * var(--col-step));
+    --col-4: calc(var(--margin) + 3 * var(--col-step));
+  }
+
+  html {
+    @apply bg-bg text-ink antialiased;
+    text-rendering: optimizeLegibility;
+    /* Native smooth scroll for anchor navigation — instant and responsive */
+    scroll-behavior: smooth;
+    /* Account for fixed header when scrolling to anchor targets */
+    scroll-padding-top: var(--header);
+  }
+
+  body {
+    @apply font-sans;
+    font-feature-settings: 'kern', 'ss01';
+  }
+
+  ::selection {
+    @apply bg-accent text-bg;
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES
+   Fluid scales using clamp() — Tailwind arbitrary syntax works
+   but these classes are cleaner at callsite.
+   ============================================================ */
+@layer utilities {
+  /* Manifesto — hero headline */
+  .t-manifesto {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: clamp(2.3rem, 9vw, 9.3rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  /* Display — page hero titles */
+  .t-display {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.94;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  /* Display profile — operator/dossier page titles, sentence case */
+  .t-display-profile {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(2.5rem, 6.5vw, 6.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+  }
+
+  /* Section — section heading, sentence case */
+  .t-section {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(1.4rem, 2vw, 1.9rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+
+  /* Keyline — bold editorial statement inside body */
+  .t-keyline {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: clamp(1.4rem, 2.2vw, 2.1rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+  }
+
+  /* Name — partner/dossier card name */
+  .t-name {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(1.25rem, 1.9vw, 1.65rem);
+    line-height: 1.05;
+    letter-spacing: -0.018em;
+  }
+
+  /* Solution name — uppercase row label */
+  .t-solution {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+
+  /* Lead — serif intro paragraph */
+  .t-lead {
+    font-family: var(--font-serif);
+    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+    line-height: 1.65;
+  }
+
+  /* Abstract — slightly larger lead */
+  .t-abstract {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(1.3rem, 1.9vw, 1.8rem);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
+  /* Prose — default serif body */
+  .t-prose {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  /* Prose fluid — for long-form content */
+  .t-prose-fluid {
+    font-family: var(--font-serif);
+    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+    line-height: 1.65;
+  }
+
+  /* Mono caption */
+  .t-caption {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* Mono label (eyebrow / metadata label) */
+  .t-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* Mono micro (footer, quiet signals) */
+  .t-micro {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* Italic serif fragment */
+  .t-fragment {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15.5px;
+    line-height: 1.5;
+  }
+}
+
+/* ============================================================
+   PERSISTENT GRID HAIRLINES
+   Fixed-position vertical columns at col 1, 4, 8, 12.
+   Positioned via CSS custom properties from :root.
+   ============================================================ */
+@layer utilities {
+  .grid-hairline {
+    @apply fixed inset-y-0 w-px bg-hairline pointer-events-none z-[1];
+  }
+}
+
+/* ============================================================
+   LEDGER OFFSET — col-3 left alignment for the engagements table
+   ============================================================ */
+@layer utilities {
+  .ledger-inset {
+    margin-left: var(--col-3);
+    margin-right: var(--margin);
+  }
+  .ledger-inset-full {
+    margin-left: var(--col-3);
+    margin-right: var(--margin);
+    width: calc(100% - var(--col-3) - var(--margin));
+  }
+
+  @media (max-width: 960px) {
+    .ledger-inset,
+    .ledger-inset-full {
+      margin-left: var(--margin);
+      width: auto;
+    }
+  }
+}
+
+/* ============================================================
+   SECTION PADDING — consistent zone rhythm
+   ============================================================ */
+@layer utilities {
+  .zone-pad  { padding: 10vh var(--margin) 11vh; }
+  .zone-pad-l { padding: 14vh var(--margin) 11vh; }
+}
+
+/* ============================================================
+   ENGAGEMENT ROTATION — fade state
+   ============================================================ */
+@layer utilities {
+  .row-fade {
+    @apply opacity-0;
+    transition: opacity 380ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .row-visible {
+    @apply opacity-100;
+    transition: opacity 380ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+/* ============================================================
+   HEADER OFFSET — push main content below fixed header
+   ============================================================ */
+@layer utilities {
+  .header-offset {
+    padding-top: var(--header);
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   FOCUS STYLES — accessible, institutional
+   ============================================================ */
+@layer base {
+  :focus-visible {
+    outline: 1.5px solid var(--accent);
+    outline-offset: 3px;
+  }
+  /* Remove default outline for mouse users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+/* ============================================================
+   IMAGE TREATMENT UTILITIES
+   ============================================================ */
+@layer utilities {
+  .img-grayscale {
+    filter: grayscale(100%) brightness(0.85) contrast(1.05);
+  }
+  .img-grayscale-light {
+    filter: grayscale(60%) brightness(0.92);
+  }
+  .img-natural {
+    filter: grayscale(0%) brightness(1) contrast(1);
+  }
+}
+
+/* ============================================================
+   MOBILE REFINEMENTS
+   ============================================================ */
+@layer utilities {
+  /* Ensure minimum tap target size (44px) for interactive elements */
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Horizontal scroll containment for tables on small screens */
+@layer base {
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Mobile typography overrides for very small screens */
+@media (max-width: 390px) {
+  .t-manifesto {
+    font-size: clamp(2rem, 10.5vw, 3.5rem);
+  }
+  .t-display {
+    font-size: clamp(1.8rem, 9vw, 3rem);
+  }
+}

@@ -1,0 +1,26 @@
+.statusNode {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  white-space: nowrap;
+}
+
+.divider {
+  color: var(--text-4);
+}
+
+@media (max-width: 960px) {
+  .statusNode {
+    font-size: 9px;
+    gap: 10px;
+  }
+  .geo,
+  .dividerGeo {
+    display: none;
+  }
+}

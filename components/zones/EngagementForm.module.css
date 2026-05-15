@@ -1,0 +1,219 @@
+.zone {
+  padding: 8vh var(--margin) 14vh;
+}
+
+.head {
+  margin-bottom: 64px;
+  max-width: 56ch;
+}
+
+.title {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.subtitle {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  max-width: 720px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.fNum {
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  display: inline-block;
+  margin-right: 14px;
+}
+
+.fText {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+
+.help {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-3);
+  margin-bottom: 18px;
+  max-width: 52ch;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--hairline-2);
+  padding: 14px 0;
+  font-family: var(--font-serif), serif;
+  font-size: 17px;
+  color: var(--text);
+  transition: border-color 140ms ease;
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-4);
+  font-style: italic;
+}
+
+.textarea {
+  min-height: 140px;
+  line-height: 1.5;
+  border: 1px solid var(--hairline-2);
+  padding: 18px 20px;
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 16px;
+  padding-top: 40px;
+  border-top: 1px solid var(--hairline-2);
+}
+
+.submitNote {
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.button {
+  align-self: flex-start;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--hairline-2);
+  color: var(--text);
+  padding: 20px 36px;
+  cursor: pointer;
+  transition: border-color 200ms ease, color 200ms ease, background 200ms ease;
+}
+
+.button:hover {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+
+.button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--hairline-2);
+}
+
+/* ============ FILED STATE ============ */
+
+.filed {
+  padding: 12vh var(--margin) 14vh;
+}
+
+.filedHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 22px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--hairline-2);
+}
+
+.filedStatus {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+  letter-spacing: -0.018em;
+  color: var(--text);
+}
+
+.filedStatus::before {
+  content: '·';
+  color: var(--accent);
+  margin-right: 12px;
+}
+
+.filedRef {
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.filedLead {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--text);
+  max-width: 56ch;
+  margin-bottom: 32px;
+}
+
+.filedNote {
+  font-family: var(--font-serif), serif;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--text-2);
+  max-width: 56ch;
+}
+
+.filedNote a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hairline-2);
+  transition: border-color 160ms ease;
+}
+
+.filedNote a:hover {
+  border-bottom-color: var(--text);
+}

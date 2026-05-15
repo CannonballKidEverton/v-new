@@ -1,0 +1,28 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header);
+  background: var(--bg);
+  border-bottom: 1px solid var(--hairline);
+  z-index: 50;
+}
+
+.inner {
+  height: 100%;
+  padding: 0 var(--margin);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 48px;
+}
+
+.wordmark {
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.005em;
+  color: var(--text);
+  text-decoration: none;
+}

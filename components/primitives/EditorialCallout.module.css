@@ -1,0 +1,59 @@
+.callout {
+  display: flex;
+  flex-direction: column;
+}
+
+.compact {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline-2);
+  gap: 14px;
+}
+
+.standalone {
+  gap: 18px;
+}
+
+.label {
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 14px;
+}
+
+.standalone .label {
+  margin-bottom: 0;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: inherit;
+}
+
+.compact .items {
+  gap: 14px;
+}
+
+.standalone .items {
+  gap: 18px;
+}
+
+.item {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  color: var(--text-3);
+}
+
+.compact .item {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.standalone .item {
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1.45;
+  color: var(--text-2);
+}
