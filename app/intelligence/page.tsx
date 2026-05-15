@@ -24,7 +24,6 @@ export default function IntelligenceIndex() {
         subtitle="Published dossiers from the institution. Restricted in places. Read openly here."
         refPrefix="VLT · INT"
         variant="division"
-        compact
       />
 
       <section className="zone-pad">

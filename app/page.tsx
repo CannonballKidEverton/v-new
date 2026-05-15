@@ -6,7 +6,7 @@ import { SolutionsZone }   from '@/components/zones/SolutionsZone';
 import { IntelligenceZone } from '@/components/zones/IntelligenceZone';
 import { PartnersZone }    from '@/components/zones/PartnersZone';
 import { EngagementBlock } from '@/components/primitives/EngagementBlock';
-import { ImagePlaceholder } from '@/components/imagery/ImagePlaceholder';
+import { ImageSlot }       from '@/components/imagery/ImageSlot';
 
 export const metadata: Metadata = {
   title: 'Valantai — From idea to exit',
@@ -23,25 +23,36 @@ export default function HomePage() {
       <OpeningZone />
       <ThesisZone />
 
-      {/* Image placement — reserved for commissioned documentary photography.
-          Replace ImagePlaceholder with EditorialImage when photography is delivered. */}
-      <div className="px-[var(--margin)] pb-0">
-        <ImagePlaceholder
-          aspect="21/9"
-          label="Documentary · Infrastructure · Operations"
-          caption="Image reserved — commissioned photography"
-          className="w-full"
-        />
-      </div>
+      {/* Full-bleed Sphere/LED band — immediately visible after manifesto */}
+      <ImageSlot
+        context="homepage_band"
+        aspect="21/7"
+        priority
+      />
 
       <EngagementsZone />
 
-      {/* Spatial pacing — 18vh of intentional air */}
-      <div className="h-[18vh] min-h-[140px]" aria-hidden="true" />
+      {/* Spatial pacing */}
+      <div className="h-[12vh] min-h-[80px]" aria-hidden="true" />
 
       <SolutionsZone />
+
+      {/* Intelligence section image band */}
+      <div className="w-full">
+        <ImageSlot context="intelligence_band" aspect="32/9" />
+      </div>
+
       <IntelligenceZone />
       <PartnersZone />
+
+      {/* Pre-Engage image band — institutional/boardroom */}
+      <div className="px-[var(--margin)] pt-4 pb-0">
+        <ImageSlot
+          context="homepage_engage"
+          aspect="32/9"
+        />
+      </div>
+
       <EngagementBlock />
     </>
   );
