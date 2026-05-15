@@ -4,6 +4,7 @@ import { PageHero }         from '@/components/primitives/PageHero';
 import { SectionHead }      from '@/components/primitives/SectionHead';
 import { EngagementBlock }  from '@/components/primitives/EngagementBlock';
 import { IntelligenceMap }  from '@/components/graphics/IntelligenceMap';
+import { ImageSlot }        from '@/components/imagery/ImageSlot';
 import { dossiers }         from '@/content/dossiers';
 
 export const metadata: Metadata = {
@@ -14,12 +15,16 @@ export const metadata: Metadata = {
 export default function IntelligenceIndex() {
   return (
     <>
+      {/* ── HERO IMAGE ── */}
+      <ImageSlot context="intelligence_band" aspect="21/8" priority />
+
       <PageHero
         index="INT · Operating Intelligence"
         title="Intelligence"
         subtitle="Published dossiers from the institution. Restricted in places. Read openly here."
         refPrefix="VLT · INT"
         variant="division"
+        compact
       />
 
       <section className="zone-pad">
@@ -29,6 +34,11 @@ export default function IntelligenceIndex() {
         />
         <IntelligenceMap />
       </section>
+
+      {/* Secondary datacenter band */}
+      <div className="px-[var(--margin)] py-[3vh]">
+        <ImageSlot context="risk_operations" aspect="32/9" />
+      </div>
 
       <section className="zone-pad border-t border-hairline">
         <SectionHead
