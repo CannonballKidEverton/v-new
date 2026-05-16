@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { manifestoLine, openingFoot } from '@/lib/motion';
 import { gmtTime, todayDate, generateDocRef } from '@/lib/utils';
+import { HeroAtmosphere } from '@/components/zones/HeroAtmosphere';
 
 const LINES = [
   'The best operators',
@@ -34,6 +35,8 @@ export function OpeningZone() {
       ref={ref}
       className="relative min-h-screen px-[var(--margin)] pt-[calc(var(--header)+11vh)] pb-[4vh] flex flex-col justify-between"
     >
+      {/* Core intelligence field — ambient atmosphere, homepage only */}
+      <HeroAtmosphere />
       {/* Manifesto */}
       <h1
         className="t-manifesto text-ink mt-[2vh] mr-[-var(--margin)] pr-2"
