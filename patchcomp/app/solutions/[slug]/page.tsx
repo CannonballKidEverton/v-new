@@ -6,29 +6,7 @@ import { SectionHead }     from '@/components/primitives/SectionHead';
 import { MetadataBlock }   from '@/components/primitives/MetadataBlock';
 import { EngagementBlock } from '@/components/primitives/EngagementBlock';
 import { VMarkIcon }       from '@/components/solutions/VMarks';
-import { DocumentaryPlaceholder } from '@/components/imagery/DocumentaryPlaceholder';
-import type { PlaceholderVariant } from '@/components/imagery/DocumentaryPlaceholder';
 import { solutions, getSolutionBySlug } from '@/content/solutions';
-
-type IntegrationMode = 'ambient-hero' | 'mid-separator' | 'none';
-
-const INTEGRATION: Record<string, { mode: IntegrationMode; variant: PlaceholderVariant }> = {
-  build:      { mode: 'ambient-hero',  variant: 'megalith' },
-  counsel:    { mode: 'ambient-hero',  variant: 'stone'    },
-  wedge:      { mode: 'ambient-hero',  variant: 'megalith' },
-  educate:    { mode: 'ambient-hero',  variant: 'stone'    },
-  angels:     { mode: 'ambient-hero',  variant: 'megalith' },
-  brand:      { mode: 'ambient-hero',  variant: 'stone'    },
-  technology: { mode: 'mid-separator', variant: 'facade'   },
-  risk:       { mode: 'mid-separator', variant: 'control'  },
-  capital:    { mode: 'mid-separator', variant: 'glass'    },
-  commerce:   { mode: 'mid-separator', variant: 'terminal' },
-  grow:       { mode: 'none',          variant: 'aerial'   },
-  gtm:        { mode: 'none',          variant: 'terminal' },
-  esg:        { mode: 'none',          variant: 'aerial'   },
-};
-
-const BG = '#0A0908';
 
 export function generateStaticParams() {
   return solutions.map((s) => ({ slug: s.slug }));
@@ -46,34 +24,17 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
   const sol = getSolutionBySlug(params.slug);
   if (!sol) notFound();
 
-  const config = INTEGRATION[sol.slug] ?? { mode: 'none' as IntegrationMode, variant: 'facade' as PlaceholderVariant };
   const hasInstrument = sol.href !== null && sol.href !== `/solutions/${sol.slug}`;
 
   return (
     <>
-      <div style={{ position: 'relative' }}>
-        {config.mode === 'ambient-hero' && (
-          <div
-            aria-hidden
-            style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}
-          >
-            <div style={{ position: 'absolute', inset: 0, opacity: 0.10 }}>
-              <DocumentaryPlaceholder variant={config.variant} aspect="21/8" />
-            </div>
-            <div style={{
-              position: 'absolute', inset: 0,
-              background: `linear-gradient(135deg, ${BG} 0%, rgba(10,9,8,0.72) 50%, rgba(10,9,8,0.55) 100%)`,
-            }} />
-          </div>
-        )}
-        <PageHero
-          index={`${sol.number} · Solutions · ${sol.name}`}
-          title={sol.name}
-          subtitle={sol.description}
-          refPrefix={`VLT · SOL/${sol.number}`}
-          variant="division"
-        />
-      </div>
+      <PageHero
+        index={`${sol.number} · Solutions · ${sol.name}`}
+        title={sol.name}
+        subtitle={sol.description}
+        refPrefix={`VLT · SOL/${sol.number}`}
+        variant="division"
+      />
 
       <section className="zone-pad grid grid-cols-1 md:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] gap-x-[clamp(48px,8vw,120px)] gap-y-12 items-start">
         <div>
@@ -103,19 +64,6 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           <MetadataBlock items={sol.metadata} />
         </aside>
       </section>
-
-      {config.mode === 'mid-separator' && (
-        <div
-          aria-hidden
-          style={{ position: 'relative', height: '80px', overflow: 'hidden', marginBlock: '-12px', pointerEvents: 'none' }}
-        >
-          <div style={{ position: 'absolute', inset: '-12%', opacity: 0.22 }}>
-            <DocumentaryPlaceholder variant={config.variant} aspect="21/3" />
-          </div>
-          <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to bottom, ${BG} 0%, transparent 35%, transparent 65%, ${BG} 100%)` }} />
-          <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to right, ${BG} 0%, transparent 12%, transparent 88%, ${BG} 100%)` }} />
-        </div>
-      )}
 
       {sol.sections.slice(1).map((section) => (
         <section
