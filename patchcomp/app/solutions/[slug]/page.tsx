@@ -10,38 +10,22 @@ import { DocumentaryPlaceholder } from '@/components/imagery/DocumentaryPlacehol
 import type { PlaceholderVariant } from '@/components/imagery/DocumentaryPlaceholder';
 import { solutions, getSolutionBySlug } from '@/content/solutions';
 
-/**
- * Integration modes — deliberately varied, never one repeated template.
- *
- *   ambient-hero   — imagery embedded as soft bg texture behind the hero text
- *                    Very low opacity. No gap. Content and image are one layer.
- *
- *   mid-separator  — slim atmospheric band between sections, not at top.
- *                    Creates a spatial breath mid-page without a top panel.
- *
- *   none           — clean typography only. No imagery. The structure carries it.
- */
 type IntegrationMode = 'ambient-hero' | 'mid-separator' | 'none';
 
 const INTEGRATION: Record<string, { mode: IntegrationMode; variant: PlaceholderVariant }> = {
-  // FOUNDATION — imagery as barely-visible atmospheric texture behind hero text
-  build:    { mode: 'ambient-hero',  variant: 'megalith' },
-  counsel:  { mode: 'ambient-hero',  variant: 'stone'    },
-  wedge:    { mode: 'ambient-hero',  variant: 'megalith' },
-  educate:  { mode: 'ambient-hero',  variant: 'stone'    },
-  angels:   { mode: 'ambient-hero',  variant: 'megalith' },
-  brand:    { mode: 'ambient-hero',  variant: 'stone'    },
-
-  // FUTURE — slim atmospheric separator mid-page, not a top panel
-  technology: { mode: 'mid-separator', variant: 'facade'     },
-  risk:       { mode: 'mid-separator', variant: 'control'    },
-  capital:    { mode: 'mid-separator', variant: 'glass'      },
-  commerce:   { mode: 'mid-separator', variant: 'terminal'   },
-
-  // SCALE — clean typography, no imagery needed
-  grow:  { mode: 'none', variant: 'aerial'   },
-  gtm:   { mode: 'none', variant: 'terminal' },
-  esg:   { mode: 'none', variant: 'aerial'   },
+  build:      { mode: 'ambient-hero',  variant: 'megalith' },
+  counsel:    { mode: 'ambient-hero',  variant: 'stone'    },
+  wedge:      { mode: 'ambient-hero',  variant: 'megalith' },
+  educate:    { mode: 'ambient-hero',  variant: 'stone'    },
+  angels:     { mode: 'ambient-hero',  variant: 'megalith' },
+  brand:      { mode: 'ambient-hero',  variant: 'stone'    },
+  technology: { mode: 'mid-separator', variant: 'facade'   },
+  risk:       { mode: 'mid-separator', variant: 'control'  },
+  capital:    { mode: 'mid-separator', variant: 'glass'    },
+  commerce:   { mode: 'mid-separator', variant: 'terminal' },
+  grow:       { mode: 'none',          variant: 'aerial'   },
+  gtm:        { mode: 'none',          variant: 'terminal' },
+  esg:        { mode: 'none',          variant: 'aerial'   },
 };
 
 const BG = '#0A0908';
@@ -67,28 +51,15 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      {/* ── PAGE HERO ─────────────────────────────────────────────────────
-          ambient-hero: imagery is a background layer behind this section.
-          Other modes: plain PageHero, no image above it.
-      ── */}
       <div style={{ position: 'relative' }}>
         {config.mode === 'ambient-hero' && (
-          /* Atmospheric texture embedded behind hero text.
-             Very low opacity — barely visible, never decorative.
-             No gap. No panel. Just environment. */
           <div
             aria-hidden
-            style={{
-              position: 'absolute',
-              inset: 0,
-              overflow: 'hidden',
-              pointerEvents: 'none',
-            }}
+            style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}
           >
             <div style={{ position: 'absolute', inset: 0, opacity: 0.10 }}>
               <DocumentaryPlaceholder variant={config.variant} aspect="21/8" />
             </div>
-            {/* Heavy overlay keeps text fully readable */}
             <div style={{
               position: 'absolute', inset: 0,
               background: `linear-gradient(135deg, ${BG} 0%, rgba(10,9,8,0.72) 50%, rgba(10,9,8,0.55) 100%)`,
@@ -101,11 +72,9 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
           subtitle={sol.description}
           refPrefix={`VLT · SOL/${sol.number}`}
           variant="division"
-          compact={config.mode === 'ambient-hero'}
         />
       </div>
 
-      {/* ── POSITIONING STATEMENT + METADATA ─────────────────────────── */}
       <section className="zone-pad grid grid-cols-1 md:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] gap-x-[clamp(48px,8vw,120px)] gap-y-12 items-start">
         <div>
           <p className="t-keyline text-ink mb-8 max-w-[54ch]">
@@ -135,35 +104,19 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
         </aside>
       </section>
 
-      {/* ── MID-SEPARATOR — slim atmospheric band between sections ─────
-          Only for mid-separator mode. Sits between intro and body.
-          Slim (80px), highly faded, no hard edges. Not a panel. ── */}
       {config.mode === 'mid-separator' && (
         <div
           aria-hidden
-          style={{
-            position: 'relative',
-            height: '80px',
-            overflow: 'hidden',
-            marginBlock: '-12px',
-            pointerEvents: 'none',
-          }}
+          style={{ position: 'relative', height: '80px', overflow: 'hidden', marginBlock: '-12px', pointerEvents: 'none' }}
         >
           <div style={{ position: 'absolute', inset: '-12%', opacity: 0.22 }}>
             <DocumentaryPlaceholder variant={config.variant} aspect="21/3" />
           </div>
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: `linear-gradient(to bottom, ${BG} 0%, transparent 35%, transparent 65%, ${BG} 100%)`,
-          }} />
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: `linear-gradient(to right, ${BG} 0%, transparent 12%, transparent 88%, ${BG} 100%)`,
-          }} />
+          <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to bottom, ${BG} 0%, transparent 35%, transparent 65%, ${BG} 100%)` }} />
+          <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(to right, ${BG} 0%, transparent 12%, transparent 88%, ${BG} 100%)` }} />
         </div>
       )}
 
-      {/* ── BODY SECTIONS ────────────────────────────────────────────── */}
       {sol.sections.slice(1).map((section) => (
         <section
           key={section.heading}
@@ -182,7 +135,6 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
         </section>
       ))}
 
-      {/* ── RELATED SOLUTIONS ────────────────────────────────────────── */}
       <section className="zone-pad border-t border-hairline">
         <SectionHead title="Related solutions" />
         <div className="flex flex-col">
