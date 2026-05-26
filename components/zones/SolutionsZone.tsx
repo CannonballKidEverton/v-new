@@ -27,7 +27,7 @@ export function SolutionsZone() {
             <Link
               key={sol.slug}
               href={destination}
-              className="group relative grid items-center gap-x-[clamp(24px,4vw,56px)] grid-cols-[64px_minmax(0,3fr)_minmax(0,7fr)_32px] py-7 border-b border-hairline first:border-t no-underline text-inherit"
+              className="group relative grid items-center gap-x-[clamp(12px,3vw,56px)] grid-cols-[48px_1fr_32px] md:grid-cols-[64px_minmax(0,3fr)_minmax(0,7fr)_32px] py-7 border-b border-hairline first:border-t no-underline text-inherit"
             >
               {/* VLT mark — CSS rotate on hover */}
               <span

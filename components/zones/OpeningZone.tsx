@@ -154,7 +154,7 @@ export function OpeningZone() {
           variants={openingFoot}
           initial="hidden"
           animate={inView?'visible':'hidden'}
-          className="font-serif text-[clamp(1.05rem,1.6vw,1.4rem)] text-ink-2 mt-6 max-w-prose"
+          className="font-serif text-[clamp(1rem,3.2vw,1.4rem)] text-ink-2 mt-6 max-w-prose"
         >
           The operating institution for ambitious companies.
         </motion.p>
@@ -164,7 +164,7 @@ export function OpeningZone() {
           variants={openingFoot}
           initial="hidden"
           animate={inView?'visible':'hidden'}
-          className="font-sans text-[clamp(0.9rem,1.2vw,1.1rem)] text-ink-2 mt-3 max-w-prose"
+          className="font-sans text-[clamp(0.85rem,2.6vw,1.1rem)] text-ink-2 mt-3 max-w-prose leading-relaxed"
         >
           We create, fix, and scale the systems companies need to compete, raise, exit, and endure.
         </motion.p>
@@ -174,9 +174,17 @@ export function OpeningZone() {
           variants={openingFoot}
           initial="hidden"
           animate={inView?'visible':'hidden'}
-          className="font-mono text-[12px] font-bold tracking-[0.14em] uppercase text-accent mt-8"
+          className="font-mono text-[clamp(9px,2.2vw,12px)] font-bold tracking-[0.08em] md:tracking-[0.14em] uppercase text-accent mt-8 leading-relaxed"
         >
-          VLT originates · VLT builds · VLT fixes · VLT connects · VLT scales
+          <span className="whitespace-nowrap">VLT originates</span>
+          <span className="text-ink-4 opacity-60"> · </span>
+          <span className="whitespace-nowrap">VLT builds</span>
+          <span className="text-ink-4 opacity-60"> · </span>
+          <span className="whitespace-nowrap">VLT fixes</span>
+          <span className="text-ink-4 opacity-60"> · </span>
+          <span className="whitespace-nowrap">VLT connects</span>
+          <span className="text-ink-4 opacity-60"> · </span>
+          <span className="whitespace-nowrap">VLT scales</span>
         </motion.p>
       </div>
       <motion.div

@@ -46,15 +46,14 @@ export function EngagementsZone() {
 
   return (
     <ArrivalWrapper as="section" className="py-[10vh]" id="engagements">
-      {/* Section head — col-3 inset */}
-      <div style={{ marginLeft: 'var(--col-3)', marginRight: 'var(--margin)' }}>
+      {/* Section head — col-3 inset on desktop, margin on mobile */}
+      <div className="mx-[var(--margin)] md:ml-[var(--col-3)] md:mr-[var(--margin)]">
         <SectionHead title="Current Engagements" counter={`${TOTAL_ACTIVE_MANDATES} active`} />
       </div>
 
       {/* Table — horizontal scroll on mobile */}
       <div
-        className="overflow-x-auto -webkit-overflow-scrolling-touch"
-        style={{ marginLeft: 'var(--col-3)', marginRight: 'var(--margin)' }}
+        className="overflow-x-auto -webkit-overflow-scrolling-touch mx-[var(--margin)] md:ml-[var(--col-3)] md:mr-[var(--margin)]"
       >
       <table
         className="border-collapse font-mono w-full"
@@ -103,7 +102,7 @@ export function EngagementsZone() {
       {/* Footer */}
       <p
         className="t-label text-ink-3 pt-[22px] border-t border-hairline"
-        style={{ marginLeft: 'var(--col-3)', marginRight: 'var(--margin)' }}
+        style={{ marginLeft: 'var(--margin)', marginRight: 'var(--margin)' }}
       >
         {rows.length} of {TOTAL_ACTIVE_MANDATES} engagements shown. Remaining held under confidentiality.
       </p>
