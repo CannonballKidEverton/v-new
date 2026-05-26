@@ -29,9 +29,9 @@ export function SolutionsZone() {
               href={destination}
               className="group relative grid items-center gap-x-[clamp(24px,4vw,56px)] grid-cols-[64px_minmax(0,3fr)_minmax(0,7fr)_32px] py-7 border-b border-hairline first:border-t no-underline text-inherit"
             >
-              {/* V mark — CSS rotate on hover */}
+              {/* VLT mark — CSS rotate on hover */}
               <span
-                className="text-ink block transition-transform duration-[220ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:rotate-[8deg]"
+                className="text-accent block transition-transform duration-[220ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:rotate-[8deg]"
                 style={{ transformOrigin: "50% 60%" }}
               >
                 <VMarkIcon variant={sol.vMark} />
