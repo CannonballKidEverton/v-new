@@ -111,7 +111,7 @@ export function OpeningZone() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100dvh] min-h-screen px-[var(--margin)] pt-[calc(var(--header)+6vh)] md:pt-[calc(var(--header)+11vh)] pb-[4vh] flex flex-col justify-between"
+      className="relative min-h-[100dvh] min-h-screen px-[var(--margin)] pt-[calc(var(--header)+6vh)] md:pt-[calc(var(--header)+11vh)] pb-[4vh] flex flex-col"
     >
       <canvas
         ref={canvasRef}
@@ -191,7 +191,7 @@ export function OpeningZone() {
         variants={openingFoot}
         initial="hidden"
         animate={inView?'visible':'hidden'}
-        className="flex items-center flex-wrap gap-2.5 font-mono text-[11px] font-medium tracking-[0.18em] uppercase text-ink-3"
+        className="mt-auto pt-8 flex items-center flex-wrap gap-2.5 font-mono text-[11px] font-medium tracking-[0.18em] uppercase text-ink-3"
       >
         <span>{docRef}</span>
         <span className="text-ink-4 opacity-60">·</span>
