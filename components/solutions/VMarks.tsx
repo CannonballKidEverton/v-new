@@ -18,13 +18,13 @@ export function VMarkIcon({ variant, className }: VMarkIconProps) {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        width: 28,
+        width: 64,
         height: 28,
         flexShrink: 0,
         fontFamily: "var(--font-mono)",
         fontWeight: 700,
-        fontSize: "11px",
-        letterSpacing: "0.14em",
+        fontSize: "clamp(1.15rem, 1.8vw, 1.55rem)",
+        letterSpacing: "0.08em",
         color: "currentColor",
       }}
       aria-hidden="true"
