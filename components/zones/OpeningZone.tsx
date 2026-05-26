@@ -111,11 +111,12 @@ export function OpeningZone() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100dvh] min-h-screen px-[var(--margin)] pt-[calc(var(--header)+6vh)] md:pt-[calc(var(--header)+11vh)] pb-[4vh] flex flex-col"
+      className="relative min-h-0 md:min-h-[100dvh] md:min-h-screen px-[var(--margin)] pt-[calc(var(--header)+4vh)] md:pt-[calc(var(--header)+11vh)] pb-[4vh] flex flex-col"
     >
       <canvas
         ref={canvasRef}
         aria-hidden
+        className="hidden md:block"
         style={{position:'absolute',inset:0,width:'100%',height:'100%',display:'block',pointerEvents:'none'}}
       />
       <div className="mt-[2vh]">
@@ -191,7 +192,7 @@ export function OpeningZone() {
         variants={openingFoot}
         initial="hidden"
         animate={inView?'visible':'hidden'}
-        className="mt-auto pt-8 flex items-center flex-wrap gap-2.5 font-mono text-[11px] font-medium tracking-[0.18em] uppercase text-ink-3"
+        className="mt-8 flex items-center flex-wrap gap-2.5 font-mono text-[11px] font-medium tracking-[0.18em] uppercase text-ink-3"
       >
         <span>{docRef}</span>
         <span className="text-ink-4 opacity-60">·</span>
@@ -199,7 +200,7 @@ export function OpeningZone() {
         <span className="text-ink-4 opacity-60">·</span>
         <span>{time}</span>
       </motion.div>
-      <span className="absolute right-[var(--margin)] bottom-[4.5vh] w-[5px] h-[5px] rounded-full bg-accent animate-radar" aria-hidden="true" />
+      <span className="hidden md:block absolute right-[var(--margin)] bottom-[4.5vh] w-[5px] h-[5px] rounded-full bg-accent animate-radar" aria-hidden="true" />
     </section>
   );
 }
