@@ -4,16 +4,17 @@ import { MetadataBlock } from '@/components/primitives/MetadataBlock';
 const METADATA = [
   { label: 'Established',          value: '2024' },
   { label: 'Principals',           value: 'S. Shellien\nT. Speechley\nT. Chhabra' },
-  { label: 'Operating across',     value: 'UK · UAE · KSA · US' },
-  { label: 'Combined experience',  value: '75 years operator-led' },
+  { label: 'Operating across',     value: 'LDN · DXB · NYC · RUH' },
+  { label: 'Combined experience',  value: '75+ years operator-led' },
+  { label: 'Active mandates',      value: '17' },
   { label: 'Programmes delivered', value: '5,650+ to date' },
 ];
 
 const FRAGMENTS = [
-  'Three jurisdictions, one mandate.',
+  'Discovery before deployment.',
   'Capital structured before first close.',
-  'Counsel embedded before incorporation.',
-  'Risk surfaced before counterparties.',
+  'Systems built before handover.',
+  'Build. Fix. Scale.',
 ];
 
 export function ThesisZone() {
@@ -25,13 +26,12 @@ export function ThesisZone() {
       {/* Editorial body */}
       <article className="t-lead text-ink max-w-prose">
         <p className="mb-[1.55em]">
-          Ambitious companies arrive at the same structural gap. The calibre of counsel
-          they need is inaccessible, unaffordable, or fragmented across firms that do not
-          speak to each other. They engage advisors who have read about the work. They
-          need operators who have done it.
+          We help companies get to the next level. Whatever they need. Business model
+          architecture, idea commercialisation, capital, counsel, commercial, technology,
+          ecommerce, brand activation. One counterparty. One mandate.
         </p>
         <p className="t-keyline text-ink mb-[1.5em]">
-          We built Valantai because the firms charging the most have done it the least.
+          Because most firms stop at advice. Valantai stays for implementation.
         </p>
         <p className="mb-[1.55em]">
           The founding partners have funded, structured, scaled, and exited companies
@@ -40,9 +40,9 @@ export function ThesisZone() {
           to deploy it.
         </p>
         <p>
-          AI is the leverage. It does not replace the judgement. It compresses the time,
-          expands the surface, and lets the operators think. Clients receive both — the
-          operators and the leverage — under one mandate, one counterparty, one signature.
+          We do not hand over a report. We hand over a running system — built,
+          deployed, and operating. AI is the leverage. It compresses the time,
+          expands the surface, and lets the operators think.
         </p>
       </article>
 

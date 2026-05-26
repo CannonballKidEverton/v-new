@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title:       { default: "Valantai", template: "%s — Valantai" },
-  description: "An operating institution for ambitious companies. Built by operators. Accelerated by AI.",
+  description: "Valantai builds future positions. The operating institution for ambitious companies.",
   metadataBase: new URL("https://valantai.com"),
   openGraph: {
     siteName: "Valantai",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card:  "summary_large_image",
-    title: "Valantai — From idea to exit",
+    title: "Valantai — Builds Future Positions",
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://valantai.com" },
@@ -27,8 +27,7 @@ const SCHEMA_ORG = {
   "@type": "Organization",
   name: "Valantai",
   url: "https://valantai.com",
-  description: "An operating institution for ambitious companies. Built by operators. Accelerated by AI.",
-  foundingDate: "2024",
+  description: "Valantai builds future positions. The operating institution for ambitious companies. We help companies get to the next level.",  foundingDate: "2024",
   areaServed: ["GB", "AE", "SA", "US"],
   contactPoint: {
     "@type": "ContactPoint",
@@ -37,11 +36,14 @@ const SCHEMA_ORG = {
   },
   sameAs: [],
   knowsAbout: [
-    "Business strategy",
+    "Business model architecture",
+    "Idea commercialisation",
     "Capital advisory",
     "Enterprise technology",
-    "Operational risk management",
+    "Ecommerce",
+    "Brand activation",
     "AI implementation",
+    "Operational risk management",
   ],
 };
 
@@ -53,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400;1,8..60,500&family=JetBrains+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400;1,8..60,500&family=JetBrains+Mono:wght@400;500;700&display=swap"
         />
         <script
           type="application/ld+json"

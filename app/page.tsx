@@ -9,11 +9,11 @@ import { EngagementBlock }  from '@/components/primitives/EngagementBlock';
 import { SolutionsTicker }  from '@/components/hero/SolutionsTicker';
 
 export const metadata: Metadata = {
-  title: 'Valantai — From idea to exit',
-  description: 'An operating institution for ambitious companies. Built by operators. Accelerated by AI.',
+  title: 'Valantai — The Operating Institution for Ambitious Companies',
+  description: 'Valantai builds future positions. Business model architecture, idea commercialisation, capital, counsel, commercial, technology, ecommerce, brand activation. We help companies get to the next level.',
   openGraph: {
-    title: 'Valantai — From idea to exit',
-    description: 'An operating institution for ambitious companies. Built by operators. Accelerated by AI.',
+    title: 'Valantai — Builds Future Positions',
+    description: 'The operating institution for ambitious companies. We create, fix, and scale the systems companies need to compete, raise, exit, and endure.',
   },
 };
 

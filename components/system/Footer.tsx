@@ -10,16 +10,26 @@ export function Footer() {
   const edition = buildEdition();
 
   return (
-    <footer className="border-t border-hairline px-[var(--margin)] py-8 flex justify-between items-center flex-wrap gap-8">
-      <span className="font-mono text-[12px] font-medium tracking-[0.2em] uppercase text-ink-2">
-        Valantai
-      </span>
-      <span className="font-mono text-[12px] font-medium tracking-[0.2em] uppercase text-ink-2">
-        LDN · DXB · NYC · RUH
-      </span>
-      <span className="font-mono text-[12px] font-medium tracking-[0.2em] uppercase text-ink-2">
-        © 2026 · Edition {edition}
-      </span>
+    <footer className="border-t border-hairline px-[var(--margin)] py-8 flex flex-col gap-4">
+      <div className="flex justify-between items-center flex-wrap gap-8">
+        <span className="font-mono text-[12px] font-bold tracking-[0.2em] uppercase text-ink-2">
+          Valantai
+        </span>
+        <span className="font-serif text-[13px] text-ink-3 italic">
+          The operating institution for ambitious companies.
+        </span>
+        <span className="font-mono text-[12px] font-medium tracking-[0.2em] uppercase text-ink-2">
+          LDN · DXB · NYC · RUH
+        </span>
+      </div>
+      <div className="flex justify-between items-center flex-wrap gap-8">
+        <span className="font-mono text-[11px] font-bold tracking-[0.14em] uppercase text-accent">
+          VLT originates · VLT builds · VLT fixes · VLT connects · VLT scales
+        </span>
+        <span className="font-mono text-[12px] font-medium tracking-[0.2em] uppercase text-ink-3">
+          © 2026 · Edition {edition}
+        </span>
+      </div>
     </footer>
   );
 }

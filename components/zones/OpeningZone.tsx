@@ -6,10 +6,9 @@ import { manifestoLine, openingFoot } from '@/lib/motion';
 import { gmtTime, todayDate, generateDocRef } from '@/lib/utils';
 
 const LINES = [
-  'The best operators',
-  'don\u2019t write',
-  'whitepapers.',
-  'They build companies.',
+  'Valantai',
+  'builds future',
+  'positions.',
 ];
 
 export function OpeningZone() {
@@ -119,18 +118,67 @@ export function OpeningZone() {
         aria-hidden
         style={{position:'absolute',inset:0,width:'100%',height:'100%',display:'block',pointerEvents:'none',willChange:'transform'}}
       />
-      <h1
-        className="t-manifesto text-ink mt-[2vh]"
-        aria-label={LINES.join(' ')}
-      >
-        {LINES.map((line, i) => (
-          <span key={i} className="block overflow-hidden" style={{marginTop:i===3?'0.45em':undefined}}>
-            <motion.span className="block" custom={i} variants={manifestoLine} initial="hidden" animate={inView?'visible':'hidden'}>
-              {line}
-            </motion.span>
-          </span>
-        ))}
-      </h1>
+      <div className="mt-[2vh]">
+        {/* Eyebrow */}
+        <motion.p
+          variants={openingFoot}
+          initial="hidden"
+          animate={inView?'visible':'hidden'}
+          className="font-mono text-[11px] font-bold tracking-[0.22em] uppercase text-ink-3 mb-6"
+        >
+          Operator Intelligence and Implementation
+        </motion.p>
+
+        {/* Main headline */}
+        <h1
+          className="t-manifesto text-ink"
+          aria-label={LINES.join(' ')}
+        >
+          {LINES.map((line, i) => (
+            <span key={i} className="block overflow-hidden">
+              <motion.span
+                className={`block ${i > 0 ? 'text-accent' : ''}`}
+                custom={i}
+                variants={manifestoLine}
+                initial="hidden"
+                animate={inView?'visible':'hidden'}
+              >
+                {line}
+              </motion.span>
+            </span>
+          ))}
+        </h1>
+
+        {/* Descriptor */}
+        <motion.p
+          variants={openingFoot}
+          initial="hidden"
+          animate={inView?'visible':'hidden'}
+          className="font-serif text-[clamp(1.05rem,1.6vw,1.4rem)] text-ink-2 mt-6 max-w-prose"
+        >
+          The operating institution for ambitious companies.
+        </motion.p>
+
+        {/* Action line */}
+        <motion.p
+          variants={openingFoot}
+          initial="hidden"
+          animate={inView?'visible':'hidden'}
+          className="font-sans text-[clamp(0.9rem,1.2vw,1.1rem)] text-ink-2 mt-3 max-w-prose"
+        >
+          We create, fix, and scale the systems companies need to compete, raise, exit, and endure.
+        </motion.p>
+
+        {/* VLT Engine */}
+        <motion.p
+          variants={openingFoot}
+          initial="hidden"
+          animate={inView?'visible':'hidden'}
+          className="font-mono text-[12px] font-bold tracking-[0.14em] uppercase text-accent mt-8"
+        >
+          VLT originates · VLT builds · VLT fixes · VLT connects · VLT scales
+        </motion.p>
+      </div>
       <motion.div
         variants={openingFoot}
         initial="hidden"

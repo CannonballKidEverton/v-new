@@ -34,7 +34,7 @@ const config: Config = {
           DEFAULT: '#1A1A18',
           2: '#25241F',
         },
-        accent: '#8A7352',
+        accent: '#C89840',
       },
 
       /**
