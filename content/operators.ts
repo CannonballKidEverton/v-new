@@ -35,8 +35,8 @@ export const operators: Operator[] = [
     slug: "tom-speechley",
     ref: "P/02",
     name: "Tom Speechley",
-    role: "Capital, structuring & cross-border",
-    roleShort: "Capital \u00b7 Structuring \u00b7 Cross-border",
+    role: "Business architecture, capital solutions & counsel",
+    roleShort: "Business Architecture \u00b7 Capital Solutions \u00b7 Counsel",
     bio: "Three decades. Three careers. Law, private equity, and founding. Author of Acquisition Finance and Financing Entrepreneurial Companies for Bloomsbury Professional.",
     longBio: [
       "Three decades. Three careers.",
