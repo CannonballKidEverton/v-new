@@ -60,7 +60,7 @@ export const solutions: Solution[] = [
         paragraphs: [
           "Business model design and financial architecture. We stress-test the numbers behind the business, modelling with the rigour that investors and acquirers will eventually apply.",
           "Company positioning and ICP definition. Where the company sits in its market, who it serves with greatest precision, and how it describes itself to the people who matter.",
-          "Founding legal foundation. The right instrument, valuation, shareholder agreements, equity structure, and governance frameworks. Built correctly before the first investor term sheet.",
+          "Foundational legal architecture. The right instrument, valuation, shareholder agreements, equity structure, and governance frameworks. Built correctly before the first investor term sheet.",
           "Operating infrastructure. CRM stack, operational systems, AI-native automation. The machinery that allows the company to scale without reinventing itself at every stage.",
         ],
       },
@@ -199,7 +199,7 @@ export const solutions: Solution[] = [
       {
         heading: "The instrument",
         paragraphs: [
-          "The Risk Engine scores companies across twelve operational domains: key person dependency, customer concentration, capital position, technology exposure, compliance, IP structure, AI maturity, supply chain, competitive position, talent, financial controls, and ESG. Each domain is weighted against the company\u2019s stage, sector, and structure.",
+          "The Risk Engine scores companies against a matrix of internal and external factors including: key person dependence, customer concentration, compliance, IP quality, capital position, technology stack, AI-defensibility, ESG, supply chain, market dynamic, regulatory exposure, geography and macro, political risk, and the black swan. Each factor is weighted against the company\u2019s stage, sector, and structure.",
           "The output is not a generic risk report. It is a ranked exposure register \u2014 the five most likely determining factors in the next twelve months, with severity bands, sector benchmarks, and direct routing to the Valantai practice best positioned to address each one.",
         ],
       },
@@ -300,7 +300,7 @@ export const solutions: Solution[] = [
       {
         heading: "What the Counsel practice covers",
         paragraphs: [
-          "Founding structure. Investor instruments, shareholder agreements, equity structures, vesting schedules, and the governance framework that holds the founding team together through disagreement and growth.",
+          "Founding structure and choice of jurisdiction. Investor instruments, shareholder agreements, equity structures, vesting schedules, and the governance framework that holds the founding team together through disagreement and growth.",
           "IP protection. Ownership, assignment, registration, and licensing strategy, for technology, brand, content, and data assets.",
           "Commercial contracts. Term sheets, partnership agreements, customer contracts, supplier agreements, reviewed with the commercial lens of an operator, not a desk lawyer.",
           "International structuring. Cross-border legal architecture for companies operating across UK, UAE, and the broader GCC, where regulatory regimes, IP law, and corporate structures differ materially.",

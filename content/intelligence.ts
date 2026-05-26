@@ -14,14 +14,14 @@ export const intelligenceSystems: IntelligenceSystem[] = [
     slug: "risk-engine",
     name: "The Risk Engine",
     description:
-      "A continuous scoring instrument across twelve operational domains. Identifies, ranks, and tracks the exposures most likely to disrupt a company before they do.",
+      "A continuous scoring instrument across internal and external risk factors. Identifies, ranks, and tracks the exposures most likely to disrupt a company before they do.",
     meta: [
       { label: "Domains covered", value: "Twelve" },
       { label: "Status", value: "In development" },
     ],
     longDescription: [
       "Most companies discover their operational risks at the point those risks become consequences. The Risk Engine exists to close that gap.",
-      "Twelve operational domains scored continuously: key person dependency, customer concentration, capital position, technology exposure, compliance, IP structure, AI maturity, supply chain, competitive position, talent, financial controls, and ESG. Each engagement adds to the calibration dataset; the instrument becomes sharper with every company it scores.",
+      "A matrix of internal and external factors scored continuously: key person dependence, customer concentration, compliance, IP quality, capital position, technology stack, AI-defensibility, ESG, supply chain, market dynamic, regulatory exposure, geography and macro, political risk, and the black swan. Each engagement adds to the calibration dataset; the instrument becomes sharper with every company it scores.",
       "The intake is a structured 13-question diagnostic. The output is a ranked exposure register, a severity band for each domain, and direct routing to the Valantai practice most equipped to address each risk.",
     ],
     hasPage: true,

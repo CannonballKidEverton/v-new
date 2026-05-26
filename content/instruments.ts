@@ -10,7 +10,7 @@ export const instruments: Instrument[] = [
     number: 'I/01',
     name: 'The Risk Engine',
     description:
-      'A continuous scoring instrument across twelve operational domains. Identifies, ranks, and tracks the exposures most likely to disrupt a company before they do.',
+      'A continuous scoring instrument across internal and external risk factors. Identifies, ranks, and tracks the exposures most likely to disrupt a company before they do.',
     meta: [
       { label: 'Domains covered', value: 'Twelve' },
       { label: 'Status', value: 'In development' },

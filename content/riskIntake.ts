@@ -1,7 +1,7 @@
 /**
  * The Risk Engine intake questionnaire.
  *
- * Each answer carries weighted scores across the twelve operational domains.
+ * Each answer carries weighted scores across the internal and external risk factors.
  * The scoring engine accumulates these and ranks the top exposures.
  *
  * Editing this file changes the diagnostic: no component changes required.

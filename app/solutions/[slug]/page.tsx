@@ -36,6 +36,16 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
         variant="division"
       />
 
+      {/* Back navigation */}
+      <div className="px-[var(--margin)] py-4 border-b border-hairline">
+        <Link
+          href="/#solutions"
+          className="font-mono text-[12px] font-bold tracking-[0.14em] uppercase text-accent no-underline hover:text-ink transition-colors duration-200"
+        >
+          ← All solutions
+        </Link>
+      </div>
+
       <section className="zone-pad grid grid-cols-1 md:grid-cols-[minmax(0,7fr)_minmax(0,3fr)] gap-x-[clamp(48px,8vw,120px)] gap-y-12 items-start">
         <div>
           <p className="t-keyline text-ink mb-8 max-w-[54ch]">
@@ -93,7 +103,7 @@ export default function SolutionPage({ params }: { params: { slug: string } }) {
               <Link
                 key={related.slug}
                 href={`/solutions/${related.slug}`}
-                className="group grid grid-cols-[64px_minmax(0,3fr)_minmax(0,7fr)_32px] items-center gap-x-[clamp(24px,4vw,56px)] py-6 border-b border-hairline first:border-t no-underline text-inherit"
+                className="group grid grid-cols-[48px_1fr_32px] md:grid-cols-[64px_minmax(0,3fr)_minmax(0,7fr)_32px] items-center gap-x-[clamp(12px,3vw,56px)] py-6 border-b border-hairline first:border-t no-underline text-inherit"
               >
                 <span className="text-ink"><VMarkIcon variant={related.vMark} /></span>
                 <span className="t-solution text-ink group-hover:text-accent transition-colors duration-moderate">

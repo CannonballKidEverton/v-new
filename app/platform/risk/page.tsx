@@ -13,7 +13,7 @@ import { riskDomains }      from "@/content/riskDomains";
 
 export const metadata: Metadata = {
   title: "The Risk Engine",
-  description: "A continuous scoring instrument across twelve operational domains.",
+  description: "A continuous scoring instrument across internal and external risk factors.",
 };
 
 export default function RiskPage() {
@@ -25,7 +25,7 @@ export default function RiskPage() {
       <PageHero
         index="DIV/004 · Solutions · Risk"
         title="The Risk Engine"
-        subtitle="A continuous scoring instrument across twelve operational domains. Identifies, ranks, and tracks the exposures most likely to disrupt a company before they do."
+        subtitle="A continuous scoring instrument across internal and external risk factors. Identifies, ranks, and tracks the exposures most likely to disrupt a company before they do."
         refPrefix="VLT · DIV/004"
         variant="division"
       />

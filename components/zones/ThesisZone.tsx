@@ -35,8 +35,7 @@ export function ThesisZone() {
         </p>
         <p className="mb-[1.55em]">
           The founding partners have funded, structured, scaled, and exited companies
-          across three decades. UK, GCC, US. Capital, enterprise infrastructure,
-          strategic counsel. The track record is the product; the institution exists
+          across three decades. UK, GCC, US. The track record is the product; the institution exists
           to deploy it.
         </p>
         <p>
