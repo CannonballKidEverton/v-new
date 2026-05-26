@@ -97,10 +97,10 @@ export function OpeningZone() {
     }
     const onMove=(e:MouseEvent)=>{const r=hero.getBoundingClientRect();tmx=((e.clientX-r.left)/r.width-.5)*2.6;tmy=((e.clientY-r.top)/r.height-.5)*2;};
     const onLeave=()=>{tmx=0;tmy=0;};
-    const onTouch=(e:TouchEvent)=>{e.preventDefault();const r=hero.getBoundingClientRect();tmx=((e.touches[0].clientX-r.left)/r.width-.5)*1.8;tmy=((e.touches[0].clientY-r.top)/r.height-.5)*1.4;};
+    const onTouch=(e:TouchEvent)=>{const r=hero.getBoundingClientRect();tmx=((e.touches[0].clientX-r.left)/r.width-.5)*1.8;tmy=((e.touches[0].clientY-r.top)/r.height-.5)*1.4;};
     hero.addEventListener('mousemove',onMove);
     hero.addEventListener('mouseleave',onLeave);
-    hero.addEventListener('touchmove',onTouch,{passive:false});
+    hero.addEventListener('touchmove',onTouch,{passive:true});
     const ro=new ResizeObserver(()=>{ctx!.setTransform(1,0,0,1,0,0);resize();});
     ro.observe(hero);
     resize();
@@ -111,12 +111,12 @@ export function OpeningZone() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen px-[var(--margin)] pt-[calc(var(--header)+11vh)] pb-[4vh] flex flex-col justify-between"
+      className="relative min-h-[100dvh] min-h-screen px-[var(--margin)] pt-[calc(var(--header)+6vh)] md:pt-[calc(var(--header)+11vh)] pb-[4vh] flex flex-col justify-between"
     >
       <canvas
         ref={canvasRef}
         aria-hidden
-        style={{position:'absolute',inset:0,width:'100%',height:'100%',display:'block',pointerEvents:'none',willChange:'transform'}}
+        style={{position:'absolute',inset:0,width:'100%',height:'100%',display:'block',pointerEvents:'none'}}
       />
       <div className="mt-[2vh]">
         {/* Eyebrow */}
