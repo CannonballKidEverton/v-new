@@ -40,7 +40,7 @@ export function ThesisZone() {
           to deploy it.
         </p>
         <p>
-          We do not hand over a report. We hand over a running system — built,
+          We do not hand over a report. We hand over a running system. Built,
           deployed, and operating. AI is the leverage. It compresses the time,
           expands the surface, and lets the operators think.
         </p>

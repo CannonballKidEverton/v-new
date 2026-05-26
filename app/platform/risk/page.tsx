@@ -36,11 +36,11 @@ export default function RiskPage() {
           <p className="font-sans font-medium text-[clamp(1.4rem,2vw,1.9rem)] tracking-[-0.018em] leading-snug mb-6">
             Most companies discover their operational risks at the point those
             risks become consequences. By then the cost is rarely the risk
-            itself — it is the absence of warning.
+            itself. It is the absence of warning.
           </p>
           <p className="mb-[1.55em]">
             The Risk Engine exists to close that gap. It is an operating
-            instrument — not a software product, not a dashboard, not a
+            instrument. Not a software product, not a dashboard, not a
             report. A company&rsquo;s position is scored across twelve
             operational domains and tracked through the lifecycle of the
             company, not the lifecycle of the engagement.
@@ -154,7 +154,7 @@ export default function RiskPage() {
               <p>
                 In practice, the top three exposures account for roughly seventy per
                 cent of the institutional attention given to a company. The instrument
-                surfaces the combinations — pairs of domains that, scored together,
+                surfaces the combinations: pairs of domains that, scored together,
                 indicate a different conversation than either domain alone would warrant.
               </p>
             </div>
@@ -212,7 +212,7 @@ export default function RiskPage() {
         <SectionHead title="Mitigation routing" counter="Domain to practice" />
         <p className="t-lead text-ink max-w-prose mb-10">
           Each surfaced exposure routes to the Valantai practice with the operating
-          depth to address it. The routing is not advisory — it is a warm introduction
+          depth to address it. The routing is not advisory. It is a warm introduction
           to a senior practitioner with direct experience of the domain in question.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-hairline border border-hairline">
@@ -284,13 +284,13 @@ export default function RiskPage() {
               </p>
               <p className="mb-[1.55em]">
                 On combinations. The instrument\u2019s most operationally useful outputs
-                are domain combinations — pairs and triples that, scored together,
+                are domain combinations: pairs and triples that, scored together,
                 surface a different conversation. Capital & runway scored with Customer
                 concentration produces a different engagement than either domain alone.
               </p>
               <p>
                 On stage sensitivity. Domain weights adjust for company stage. A
-                pre-revenue company should carry high Key person and Capital scores —
+                pre-revenue company should carry high Key person and Capital scores.
                 that is not an indictment; it is the operational reality of being early.
                 The instrument benchmarks against peers at the same stage.
               </p>

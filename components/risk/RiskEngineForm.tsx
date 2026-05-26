@@ -84,7 +84,7 @@ function Question({
             'transition-colors duration-reactive'
           )}
         >
-          <option value="">— Select —</option>
+          <option value="">Select</option>
           {question.options.map((opt) => (
             <option key={opt.value} value={opt.value}>{opt.label}</option>
           ))}
@@ -133,8 +133,8 @@ function FiledOutput({ ranking, diagRef }: { ranking: RankedDomain[]; diagRef: s
 
       <p className="font-serif text-[clamp(1rem,1.2vw,1.15rem)] leading-relaxed text-ink-2 max-w-[64ch] mb-12">
         A senior counsel will be in touch within forty-eight hours to walk through the
-        surfaced exposures and the operational pathway. The full diagnostic — sector
-        benchmarking, mitigation sequencing, and the standing dashboard — is delivered
+        surfaced exposures and the operational pathway. The full diagnostic (sector
+        benchmarking, mitigation sequencing, and the standing dashboard) is delivered
         under engagement.
       </p>
       <p className="t-label text-ink-4">

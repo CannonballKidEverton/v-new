@@ -4,7 +4,7 @@
  * Each answer carries weighted scores across the twelve operational domains.
  * The scoring engine accumulates these and ranks the top exposures.
  *
- * Editing this file changes the diagnostic — no component changes required.
+ * Editing this file changes the diagnostic: no component changes required.
  */
 
 export interface RiskAnswer {
@@ -40,14 +40,14 @@ export const riskIntake: RiskSection[] = [
         ref: 'Q/01',
         name: 'stage',
         question: 'What stage best describes the company today?',
-        help: 'Choose the closest descriptor — granular precision is not required at this stage.',
+        help: 'Choose the closest descriptor: granular precision is not required at this stage.',
         type: 'radio',
         options: [
-          { value: 'pre-revenue', label: 'Pre-revenue — building toward first paying customers.', scores: { D03: 3, D02: 2 } },
-          { value: 'first-customers', label: 'First customers — early traction, no repeatable motion yet.', scores: { D02: 3, D09: 2, D03: 1 } },
-          { value: 'series-a', label: 'Series A or equivalent — funded, scaling commercial motion.', scores: { D10: 2, D11: 1 } },
-          { value: 'scale', label: 'Scale — multi-market, expanding team and operating complexity.', scores: { D10: 3, D11: 2, D04: 2 } },
-          { value: 'mature', label: 'Mature — cash-generative, considering transformation or exit.', scores: { D09: 2, D11: 1 } },
+          { value: 'pre-revenue', label: 'Pre-revenue: building toward first paying customers.', scores: { D03: 3, D02: 2 } },
+          { value: 'first-customers', label: 'First customers: early traction, no repeatable motion yet.', scores: { D02: 3, D09: 2, D03: 1 } },
+          { value: 'series-a', label: 'Series A or equivalent: funded, scaling commercial motion.', scores: { D10: 2, D11: 1 } },
+          { value: 'scale', label: 'Scale: multi-market, expanding team and operating complexity.', scores: { D10: 3, D11: 2, D04: 2 } },
+          { value: 'mature', label: 'Mature: cash-generative, considering transformation or exit.', scores: { D09: 2, D11: 1 } },
         ],
       },
       {
@@ -56,18 +56,18 @@ export const riskIntake: RiskSection[] = [
         question: 'Approximate headcount band?',
         type: 'radio',
         options: [
-          { value: '1-5', label: '1 to 5 — founder-led, hands on the work.', scores: { D01: 4 } },
-          { value: '6-15', label: '6 to 15 — early team forming, role specialisation beginning.', scores: { D01: 3, D10: 1 } },
-          { value: '16-50', label: '16 to 50 — operating layer takes shape.', scores: { D10: 2 } },
-          { value: '51-200', label: '51 to 200 — multi-function, formal management.', scores: { D11: 2, D10: 2 } },
-          { value: '200+', label: '200+ — institutional operating complexity.', scores: { D11: 3, D10: 1 } },
+          { value: '1-5', label: '1 to 5: founder-led, hands on the work.', scores: { D01: 4 } },
+          { value: '6-15', label: '6 to 15: early team forming, role specialisation beginning.', scores: { D01: 3, D10: 1 } },
+          { value: '16-50', label: '16 to 50: operating layer takes shape.', scores: { D10: 2 } },
+          { value: '51-200', label: '51 to 200: multi-function, formal management.', scores: { D11: 2, D10: 2 } },
+          { value: '200+', label: '200+: institutional operating complexity.', scores: { D11: 3, D10: 1 } },
         ],
       },
       {
         ref: 'Q/03',
         name: 'jurisdiction',
         question: 'Primary operating jurisdiction?',
-        help: 'For context only — does not score directly. Multi-jurisdiction exposure is captured in Section D.',
+        help: 'For context only: does not score directly. Multi-jurisdiction exposure is captured in Section D.',
         type: 'select',
         options: [
           { value: 'UK', label: 'United Kingdom', scores: {} },
@@ -92,10 +92,10 @@ export const riskIntake: RiskSection[] = [
         question: 'Current funding status?',
         type: 'radio',
         options: [
-          { value: 'bootstrapped', label: 'Bootstrapped — no external capital deployed.', scores: { D03: 2 } },
-          { value: 'angel', label: 'Angel or pre-seed — initial external capital, limited.', scores: { D03: 3 } },
-          { value: 'seed', label: 'Seed — institutional first round closed.', scores: { D03: 2 } },
-          { value: 'series-a-plus', label: 'Series A or later — institutional capital deployed.', scores: { D03: 1 } },
+          { value: 'bootstrapped', label: 'Bootstrapped: no external capital deployed.', scores: { D03: 2 } },
+          { value: 'angel', label: 'Angel or pre-seed: initial external capital, limited.', scores: { D03: 3 } },
+          { value: 'seed', label: 'Seed: institutional first round closed.', scores: { D03: 2 } },
+          { value: 'series-a-plus', label: 'Series A or later: institutional capital deployed.', scores: { D03: 1 } },
           { value: 'profitable', label: 'Profitable and cash-generative.', scores: { D03: 0 } },
         ],
       },
@@ -106,11 +106,11 @@ export const riskIntake: RiskSection[] = [
         help: 'Months of cash available before either profitability or the next capital event.',
         type: 'radio',
         options: [
-          { value: 'under-6', label: 'Under six months — capital event required imminently.', scores: { D03: 5 } },
-          { value: '6-12', label: 'Six to twelve months — raise should already be in process.', scores: { D03: 4 } },
-          { value: '12-24', label: 'Twelve to twenty-four months — operating comfortably.', scores: { D03: 2 } },
+          { value: 'under-6', label: 'Under six months: capital event required imminently.', scores: { D03: 5 } },
+          { value: '6-12', label: 'Six to twelve months: raise should already be in process.', scores: { D03: 4 } },
+          { value: '12-24', label: 'Twelve to twenty-four months: operating comfortably.', scores: { D03: 2 } },
           { value: '24-plus', label: 'Over twenty-four months, or profitable.', scores: { D03: 0 } },
-          { value: 'na', label: 'Not applicable — pre-burn.', scores: { D03: 1 } },
+          { value: 'na', label: 'Not applicable: pre-burn.', scores: { D03: 1 } },
         ],
       },
       {
@@ -120,9 +120,9 @@ export const riskIntake: RiskSection[] = [
         type: 'radio',
         options: [
           { value: 'fully', label: 'Fully agreed, documented, and signed.', scores: { D06: 0 } },
-          { value: 'verbal', label: 'Verbal understanding — not yet documented.', scores: { D06: 4 } },
+          { value: 'verbal', label: 'Verbal understanding: not yet documented.', scores: { D06: 4 } },
           { value: 'absent', label: 'Not yet addressed.', scores: { D06: 5 } },
-          { value: 'solo', label: 'Single founder — not applicable.', scores: { D06: 1 } },
+          { value: 'solo', label: 'Single founder: not applicable.', scores: { D06: 1 } },
         ],
       },
     ],
@@ -138,11 +138,11 @@ export const riskIntake: RiskSection[] = [
         question: 'Approximate customer count?',
         type: 'radio',
         options: [
-          { value: 'pre', label: 'Pre-revenue — no paying customers yet.', scores: { D02: 3 } },
-          { value: '1-10', label: '1 to 10 — concentration likely.', scores: { D02: 4 } },
-          { value: '11-100', label: '11 to 100 — emerging customer base.', scores: { D02: 2 } },
-          { value: '101-1000', label: '101 to 1,000 — diversified.', scores: { D02: 1 } },
-          { value: '1000+', label: 'Over 1,000 — broad base.', scores: { D02: 0 } },
+          { value: 'pre', label: 'Pre-revenue: no paying customers yet.', scores: { D02: 3 } },
+          { value: '1-10', label: '1 to 10: concentration likely.', scores: { D02: 4 } },
+          { value: '11-100', label: '11 to 100: emerging customer base.', scores: { D02: 2 } },
+          { value: '101-1000', label: '101 to 1,000: diversified.', scores: { D02: 1 } },
+          { value: '1000+', label: 'Over 1,000: broad base.', scores: { D02: 0 } },
         ],
       },
       {
@@ -152,11 +152,11 @@ export const riskIntake: RiskSection[] = [
         help: 'Approximation is sufficient. Concentration in the top one or top three accounts.',
         type: 'radio',
         options: [
-          { value: 'over-50', label: 'Over 50% — material single-account exposure.', scores: { D02: 5 } },
-          { value: '25-50', label: '25 to 50% — significant concentration.', scores: { D02: 3 } },
-          { value: '10-25', label: '10 to 25% — moderate concentration.', scores: { D02: 1 } },
-          { value: 'under-10', label: 'Under 10% — diversified.', scores: { D02: 0 } },
-          { value: 'pre', label: 'Pre-revenue — not yet measurable.', scores: { D02: 2 } },
+          { value: 'over-50', label: 'Over 50%: material single-account exposure.', scores: { D02: 5 } },
+          { value: '25-50', label: '25 to 50%: significant concentration.', scores: { D02: 3 } },
+          { value: '10-25', label: '10 to 25%: moderate concentration.', scores: { D02: 1 } },
+          { value: 'under-10', label: 'Under 10%: diversified.', scores: { D02: 0 } },
+          { value: 'pre', label: 'Pre-revenue: not yet measurable.', scores: { D02: 2 } },
         ],
       },
       {
@@ -165,9 +165,9 @@ export const riskIntake: RiskSection[] = [
         question: 'Competitive intensity of the market?',
         type: 'radio',
         options: [
-          { value: 'established', label: 'Established category — multiple well-funded incumbents.', scores: { D09: 4 } },
-          { value: 'emerging', label: 'Emerging category — one or two direct competitors.', scores: { D09: 2 } },
-          { value: 'defining', label: 'Defining the category — limited direct competition.', scores: { D09: 1 } },
+          { value: 'established', label: 'Established category: multiple well-funded incumbents.', scores: { D09: 4 } },
+          { value: 'emerging', label: 'Emerging category: one or two direct competitors.', scores: { D09: 2 } },
+          { value: 'defining', label: 'Defining the category: limited direct competition.', scores: { D09: 1 } },
         ],
       },
     ],
@@ -183,10 +183,10 @@ export const riskIntake: RiskSection[] = [
         question: 'Number of active founders in the business?',
         type: 'radio',
         options: [
-          { value: '1', label: 'One — single-founder execution.', scores: { D01: 5 } },
-          { value: '2', label: 'Two — co-founder structure.', scores: { D01: 1 } },
-          { value: '3', label: 'Three — small founding team.', scores: { D01: 0 } },
-          { value: '4+', label: 'Four or more — broader founding team.', scores: { D01: 1, D06: 1 } },
+          { value: '1', label: 'One: single-founder execution.', scores: { D01: 5 } },
+          { value: '2', label: 'Two: co-founder structure.', scores: { D01: 1 } },
+          { value: '3', label: 'Three: small founding team.', scores: { D01: 0 } },
+          { value: '4+', label: 'Four or more: broader founding team.', scores: { D01: 1, D06: 1 } },
         ],
       },
       {
@@ -197,7 +197,7 @@ export const riskIntake: RiskSection[] = [
         options: [
           { value: 'monthly', label: 'Monthly board reporting in place.', scores: { D11: 0 } },
           { value: 'quarterly', label: 'Quarterly reporting only.', scores: { D11: 2 } },
-          { value: 'adhoc', label: 'Ad-hoc — no standing cadence.', scores: { D11: 4 } },
+          { value: 'adhoc', label: 'Ad-hoc: no standing cadence.', scores: { D11: 4 } },
           { value: 'none', label: 'None in place.', scores: { D11: 5 } },
         ],
       },
@@ -208,7 +208,7 @@ export const riskIntake: RiskSection[] = [
         type: 'radio',
         options: [
           { value: 'fully', label: 'Fully documented, registered where appropriate.', scores: { D06: 0 } },
-          { value: 'partial', label: 'Partially in place — some assets unprotected.', scores: { D06: 3 } },
+          { value: 'partial', label: 'Partially in place: some assets unprotected.', scores: { D06: 3 } },
           { value: 'none', label: 'Not yet addressed.', scores: { D06: 5 } },
           { value: 'na', label: 'Not applicable to this business.', scores: { D06: 0 } },
         ],
@@ -219,9 +219,9 @@ export const riskIntake: RiskSection[] = [
         question: 'Operating jurisdictions beyond the primary?',
         type: 'radio',
         options: [
-          { value: 'none', label: 'None — single-jurisdiction operation.', scores: { D05: 0 } },
+          { value: 'none', label: 'None: single-jurisdiction operation.', scores: { D05: 0 } },
           { value: '1-2', label: 'One or two additional jurisdictions.', scores: { D05: 2 } },
-          { value: '3+', label: 'Three or more — multi-jurisdiction structure.', scores: { D05: 4 } },
+          { value: '3+', label: 'Three or more: multi-jurisdiction structure.', scores: { D05: 4 } },
         ],
       },
     ],
