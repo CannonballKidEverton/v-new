@@ -6,18 +6,18 @@ import { EngagementBlock } from '@/components/primitives/EngagementBlock';
 import { operators, getOperatorBySlug } from '@/content/operators';
 
 export function generateStaticParams() {
-  return operators.map((op) => ({ slug: op.slug }));
+  return operators.filter(op => !op.hidden).map((op) => ({ slug: op.slug }));
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const op = getOperatorBySlug(params.slug);
-  if (!op) return {};
+  if (!op || op.hidden) return {};
   return { title: op.name, description: op.bio };
 }
 
 export default function OperatorPage({ params }: { params: { slug: string } }) {
   const op = getOperatorBySlug(params.slug);
-  if (!op) notFound();
+  if (!op || op.hidden) notFound();
 
   const meta = [
     ...op.meta,

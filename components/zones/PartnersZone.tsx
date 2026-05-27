@@ -11,7 +11,7 @@ export function PartnersZone() {
         counter="Three principals · Founded 2024"
       />
       <div className="grid grid-cols-1 md:grid-cols-3 border-t border-hairline border-b border-hairline">
-        {operators.map((op, i) => (
+        {operators.filter(op => !op.hidden).map((op, i, arr) => (
           <Link
             key={op.slug}
             href={`/operators/${op.slug}`}
@@ -19,7 +19,7 @@ export function PartnersZone() {
               'group flex flex-col min-h-[220px]',
               'py-11 pr-8 no-underline text-inherit',
               i > 0 ? 'md:border-l border-hairline md:pl-8' : '',
-              i < operators.length - 1 ? 'border-b md:border-b-0 border-hairline' : '',
+              i < arr.length - 1 ? 'border-b md:border-b-0 border-hairline' : '',
             ]
               .filter(Boolean)
               .join(' ')}
