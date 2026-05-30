@@ -33,7 +33,7 @@ export const mandates: Mandate[] = [
   },
   {
     reference: 'M.2025/11',
-    jurisdiction: 'AUH · UAE',
+    jurisdiction: 'Global',
     mandate: 'Capital advisory',
     sector: 'Institutional capital',
     position: null,

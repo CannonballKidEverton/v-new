@@ -17,7 +17,7 @@ export interface Engagement {
 export const ENGAGEMENT_POOL: Engagement[] = [
   { ref: 'M.2025/04', city: 'DXB · UAE', mandate: 'Enterprise CRM deployment', sector: 'Real estate',           status: 'deployed',    statusLabel: 'Deployed'     },
   { ref: 'M.2025/07', city: 'LDN · UK',  mandate: 'AI programme',              sector: 'Financial services',   status: 'delivery',    statusLabel: 'In delivery'  },
-  { ref: 'M.2025/11', city: 'AUH · UAE', mandate: 'Capital advisory',          sector: 'Institutional capital', status: 'filed',      statusLabel: 'Filed'        },
+  { ref: 'M.2025/11', city: 'Global',     mandate: 'Capital advisory',          sector: 'Institutional capital', status: 'filed',      statusLabel: 'Filed'        },
   { ref: 'M.2026/01', city: 'LDN · UK',  mandate: 'Risk architecture',         sector: 'D2C commerce',         status: 'active',      statusLabel: 'Active'       },
   { ref: 'M.2026/02', city: 'RUH · KSA', mandate: 'Operating counsel',         sector: 'Family office',        status: 'structuring', statusLabel: 'Structuring'  },
   { ref: 'M.2026/03', city: 'NYC · US',  mandate: 'Investor readiness',        sector: 'Enterprise SaaS',      status: 'diligence',   statusLabel: 'In diligence' },

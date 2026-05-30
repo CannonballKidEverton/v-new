@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { OpeningZone }      from '@/components/zones/OpeningZone';
-import { ThesisZone }       from '@/components/zones/ThesisZone';
+// import { ThesisZone }       from '@/components/zones/ThesisZone';
 import { EngagementsZone }  from '@/components/zones/EngagementsZone';
 import { SolutionsZone }    from '@/components/zones/SolutionsZone';
 import { IntelligenceZone } from '@/components/zones/IntelligenceZone';
-import { PartnersZone }     from '@/components/zones/PartnersZone';
+// import { PartnersZone }     from '@/components/zones/PartnersZone';
 import { EngagementBlock }  from '@/components/primitives/EngagementBlock';
 import { SolutionsTicker }  from '@/components/hero/SolutionsTicker';
 
@@ -21,14 +21,14 @@ export default function HomePage() {
   return (
     <>
       <OpeningZone />
-      <ThesisZone />
+      {/* <ThesisZone /> */}
       <EngagementsZone />
       <div className="relative">
         <SolutionsTicker />
         <SolutionsZone />
       </div>
       <IntelligenceZone />
-      <PartnersZone />
+      {/* <PartnersZone /> */}
       <EngagementBlock />
     </>
   );
