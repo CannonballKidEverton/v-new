@@ -16,7 +16,7 @@ export function SystemFooter() {
   return (
     <footer className={styles.footer}>
       <span>Valantai</span>
-      <span>LDN · DXB · NYC · RUH</span>
+      <span>LDN · UAE · NYC · KSA</span>
       <span>© 2026 · Edition {edition}</span>
     </footer>
   );

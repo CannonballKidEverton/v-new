@@ -1,6 +1,6 @@
 /**
  * JurisdictionMap — four operating territories rendered as connected nodes.
- * LDN · DXB · NYC · RUH
+ * LDN · UAE · NYC · KSA
  * Pure SVG. Institutional weight without geographic literalism.
  */
 
@@ -16,17 +16,17 @@ interface City {
 const CITIES: City[] = [
   { id: "LDN", label: "London",  sub: "GMT+0 · United Kingdom",        x: 160, y: 110, active: true },
   { id: "NYC", label: "New York", sub: "GMT−5 · United States",         x: 80,  y: 240 },
-  { id: "DXB", label: "Dubai",    sub: "GMT+4 · United Arab Emirates",  x: 520, y: 160, active: true },
-  { id: "RUH", label: "Riyadh",   sub: "GMT+3 · Kingdom of Saudi Arabia", x: 440, y: 280, active: true },
+  { id: "UAE", label: "Dubai",    sub: "GMT+4 · United Arab Emirates",  x: 520, y: 160, active: true },
+  { id: "KSA", label: "Riyadh",   sub: "GMT+3 · Kingdom of Saudi Arabia", x: 440, y: 280, active: true },
 ];
 
 // Each connection as [from-id, to-id, label]
 const CONNECTIONS: [string, string, string][] = [
-  ["LDN", "DXB", "Cross-border"],
-  ["LDN", "RUH", "Sovereign"],
+  ["LDN", "UAE", "Cross-border"],
+  ["LDN", "KSA", "Sovereign"],
   ["LDN", "NYC", "Capital"],
-  ["DXB", "RUH", "GCC"],
-  ["NYC", "RUH", "US · GCC"],
+  ["UAE", "KSA", "GCC"],
+  ["NYC", "KSA", "US · GCC"],
 ];
 
 function getCity(id: string): City {
@@ -39,7 +39,7 @@ export function JurisdictionMap() {
   const NODE_R = 5;
 
   return (
-    <div className="w-full" role="img" aria-label="Operating jurisdiction network — LDN, DXB, NYC, RUH">
+    <div className="w-full" role="img" aria-label="Operating jurisdiction network — LDN, UAE, NYC, KSA">
       <svg
         viewBox={`0 0 ${W} ${H}`}
         xmlns="http://www.w3.org/2000/svg"

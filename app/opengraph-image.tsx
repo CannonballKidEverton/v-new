@@ -50,7 +50,7 @@ export default function OgImage() {
               fontFamily: "monospace",
             }}
           >
-            LDN · DXB · NYC · RUH
+            LDN · UAE · NYC · KSA
           </span>
         </div>
 

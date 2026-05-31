@@ -19,7 +19,7 @@ export function Footer() {
           The operating institution for ambitious companies.
         </span>
         <span className="font-mono text-[12px] font-medium tracking-[0.2em] uppercase text-ink-2">
-          LDN · DXB · NYC · RUH
+          LDN · UAE · NYC · KSA
         </span>
       </div>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-8">

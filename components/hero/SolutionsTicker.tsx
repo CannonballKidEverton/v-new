@@ -13,7 +13,7 @@
 const TERMS = [
   'Build', 'Capital', 'Technology', 'Risk', 'Commerce', 'Counsel',
   'Grow', 'Brand', 'GTM', 'ESG', 'Educate', 'Wedge', 'Angels',
-  'LDN', 'DXB', 'NYC', 'RUH',
+  'LDN', 'UAE', 'NYC', 'KSA',
   'Mandate', 'Capital Route', 'Risk Domain', 'Operating Counsel',
   'Scale', 'Exit', 'IPO', 'Idea',
 ];

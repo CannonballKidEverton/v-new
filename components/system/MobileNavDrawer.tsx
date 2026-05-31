@@ -114,7 +114,7 @@ export function MobileNavDrawer({ mandateCount }: { mandateCount: number }) {
             Active mandates · {mandateCount}
           </p>
           <p className="font-mono text-[11px] font-medium tracking-[0.2em] uppercase text-ink-3">
-            LDN · DXB · NYC · RUH
+            LDN · UAE · NYC · KSA
           </p>
           <a
             href="mailto:hello@valantai.com"

@@ -33,7 +33,7 @@ export function StatusNode({ mandateCount = 17, className }: StatusNodeProps) {
         <span>{mandateCount}</span>
       </span>
       <span className="text-ink-4 hidden lg:inline">|</span>
-      <span className="hidden lg:inline">LDN · DXB · NYC · RUH</span>
+      <span className="hidden lg:inline">LDN · UAE · NYC · KSA</span>
       <span className="text-ink-4">|</span>
       <span>{time}</span>
     </div>
