@@ -45,7 +45,7 @@ export const operators: Operator[] = [
       "As a lawyer in London and New York advising major financial institutions and corporates on LBOs and complex financing solutions. Counselling entrepreneurial companies and their founders on acquisitions, restructurings and finance.",
       "As a private equity investor, managing emerging market funds, raising capital, building teams, opening new geographies, new strategies.",
       "As a founder. Building companies in healthcare, technology and business services. Plus extensive experience mentoring founders, angel investing and raising capital.",
-      "And as an author, Acquisition Finance and Financing Entrepreneurial Companies (commissioned) for Bloomsbury Professional and Funding Startups for CapTableBooks.",
+      "And as an author, Acquisition Finance and Financing Entrepreneurial Companies (*commissioned*) for Bloomsbury Professional and Funding Startups for CapTableBooks.",
       "\u201CFirst you find the button, then you make the suit.\u201D",
     ],
     meta: [

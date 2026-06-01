@@ -41,7 +41,7 @@ export default function OperatorPage({ params }: { params: { slug: string } }) {
       >
         <article className="t-lead text-ink max-w-prose">
           {op.longBio.map((para, i) => (
-            <p key={i} className="mb-[1.55em] last:mb-0">{para}</p>
+            <p key={i} className="mb-[1.55em] last:mb-0" dangerouslySetInnerHTML={{ __html: para.replace(/\*(.*?)\*/g, '<em>$1</em>') }} />
           ))}
         </article>
 
