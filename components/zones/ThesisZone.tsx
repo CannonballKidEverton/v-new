@@ -3,7 +3,7 @@ import { MetadataBlock } from '@/components/primitives/MetadataBlock';
 
 const METADATA = [
   { label: 'Established',          value: '2024' },
-  { label: 'Principals',           value: 'S. Shellien\nT. Speechley\nT. Chhabra' },
+
   { label: 'Operating across',     value: 'LDN · UAE · NYC · KSA' },
   { label: 'Combined experience',  value: '75+ years operator-led' },
   { label: 'Active mandates',      value: '17' },
