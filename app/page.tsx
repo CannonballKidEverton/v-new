@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { OpeningZone }      from '@/components/zones/OpeningZone';
-// import { ThesisZone }       from '@/components/zones/ThesisZone';
+import { ThesisZone }       from '@/components/zones/ThesisZone';
 import { EngagementsZone }  from '@/components/zones/EngagementsZone';
 import { SolutionsZone }    from '@/components/zones/SolutionsZone';
 import { IntelligenceZone } from '@/components/zones/IntelligenceZone';
@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <>
       <OpeningZone />
-      {/* <ThesisZone /> */}
+      <ThesisZone />
       <EngagementsZone />
       <div className="relative">
         <SolutionsTicker />
