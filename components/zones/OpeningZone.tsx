@@ -28,6 +28,8 @@ export function OpeningZone() {
   }, []);
 
   useEffect(() => {
+    let initRaf: number;
+    initRaf = requestAnimationFrame(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -111,6 +113,8 @@ export function OpeningZone() {
     io.observe(hero);
     if(reduced){t=1.5;draw();cancelAnimationFrame(raf);}else{start();}
     return()=>{stop();io.disconnect();hero.removeEventListener('mousemove',onMove);hero.removeEventListener('mouseleave',onLeave);hero.removeEventListener('touchmove',onTouch);ro.disconnect();};
+    }); // end initRaf
+    return () => { cancelAnimationFrame(initRaf); };
   }, []);
 
   return (

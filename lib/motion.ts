@@ -61,7 +61,7 @@ export const manifestoLine: Variants = {
     transition: {
       duration: DUR.ARRIVAL,
       ease: EASE_ARRIVAL,
-      delay: ([0.06, 0.17, 0.28, 0.54] as const)[i] ?? 0,
+      delay: ([0.04, 0.12, 0.20, 0.36] as const)[i] ?? 0,
     },
   }),
 };
@@ -71,7 +71,7 @@ export const openingFoot: Variants = {
   hidden:  { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.6, ease: 'easeOut', delay: 0.9 },
+    transition: { duration: 0.4, ease: 'easeOut', delay: 0.5 },
   },
 };
 
