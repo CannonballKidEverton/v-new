@@ -104,8 +104,13 @@ export function OpeningZone() {
     const ro=new ResizeObserver(()=>{ctx!.setTransform(1,0,0,1,0,0);resize();});
     ro.observe(hero);
     resize();
-    if(reduced){t=1.5;draw();cancelAnimationFrame(raf);}else{raf=requestAnimationFrame(draw);}
-    return()=>{cancelAnimationFrame(raf);hero.removeEventListener('mousemove',onMove);hero.removeEventListener('mouseleave',onLeave);hero.removeEventListener('touchmove',onTouch);ro.disconnect();};
+    let running = false;
+    function start(){if(!running&&!reduced){running=true;raf=requestAnimationFrame(draw);}}
+    function stop(){if(running){running=false;cancelAnimationFrame(raf);}}
+    const io=new IntersectionObserver((entries)=>{entries[0].isIntersecting?start():stop();},{threshold:0});
+    io.observe(hero);
+    if(reduced){t=1.5;draw();cancelAnimationFrame(raf);}else{start();}
+    return()=>{stop();io.disconnect();hero.removeEventListener('mousemove',onMove);hero.removeEventListener('mouseleave',onLeave);hero.removeEventListener('touchmove',onTouch);ro.disconnect();};
   }, []);
 
   return (
@@ -117,7 +122,7 @@ export function OpeningZone() {
         ref={canvasRef}
         aria-hidden
         className="hidden md:block"
-        style={{position:'absolute',inset:0,width:'100%',height:'100%',display:'block',pointerEvents:'none'}}
+        style={{position:'absolute',inset:0,width:'100%',height:'100%',display:'block',pointerEvents:'none',willChange:'transform',contain:'strict'}}
       />
       <div className="mt-[2vh]">
         {/* Eyebrow */}
