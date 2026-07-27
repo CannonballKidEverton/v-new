@@ -15,7 +15,7 @@ export interface Mandate {
 export const mandates: Mandate[] = [
   {
     reference: 'M.2025/04',
-    jurisdiction: 'DXB · UAE',
+    jurisdiction: 'UAE',
     mandate: 'Enterprise CRM deployment',
     sector: 'Real estate',
     position: '$100,000',
@@ -51,7 +51,7 @@ export const mandates: Mandate[] = [
   },
   {
     reference: 'M.2026/02',
-    jurisdiction: 'RUH · KSA',
+    jurisdiction: 'KSA',
     mandate: 'Operating counsel',
     sector: 'Family office',
     position: null,
